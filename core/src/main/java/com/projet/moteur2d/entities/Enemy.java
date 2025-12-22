@@ -27,6 +27,12 @@ public class Enemy extends Entity {
      * @param height Hauteur de l'ennemi en pixels
      */
 
+    // NOUVEAU CONSTRUCTEUR avec texturePath
+    public Enemy(float x, float y, float width, float height, String texturePath) {
+        super(x, y, width, height);
+        texture = new Texture(texturePath);
+    }
+
     public Enemy(float x, float y, float width, float height) {
         super(x, y, width, height);
         texture = new Texture("enemy.png");
