@@ -53,17 +53,18 @@ public class Player extends Entity {
         float newX = x;
         float newY = y;
 
-        if (Gdx.input.isKeyPressed(Input.Keys.Z)) newY = y + speed;
-        if (Gdx.input.isKeyPressed(Input.Keys.S)) newY = y - speed;
-        if (Gdx.input.isKeyPressed(Input.Keys.Q)) newX = x - speed;
-        if (Gdx.input.isKeyPressed(Input.Keys.D)) newX = x + speed;
+        if (Gdx.input.isKeyPressed(Input.Keys.W)) newY += speed;
+        if (Gdx.input.isKeyPressed(Input.Keys.S)) newY -= speed;
+        if (Gdx.input.isKeyPressed(Input.Keys.A)) newX -= speed;
+        if (Gdx.input.isKeyPressed(Input.Keys.D)) newX += speed;
 
-        // Vérifier collisions avec la map avant de déplacer
         if (!gameMap.collidesWithMap(newX, newY, width, height)) {
             x = newX;
             y = newY;
         }
     }
+
+
 
     /**
      * Dessine le joueur à l'écran.

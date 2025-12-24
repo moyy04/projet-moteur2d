@@ -11,10 +11,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * </p>
  *
  * @author [Ton nom]
- * @version 1.0
+ * @version 1.1
  * @see Entity
  */
-
 public class Enemy extends Entity {
     private Texture texture;
 
@@ -25,47 +24,26 @@ public class Enemy extends Entity {
      * @param y Position Y en pixels
      * @param width Largeur de l'ennemi en pixels
      * @param height Hauteur de l'ennemi en pixels
+     * @param texturePath Chemin vers la texture
      */
-
-    // NOUVEAU CONSTRUCTEUR avec texturePath
     public Enemy(float x, float y, float width, float height, String texturePath) {
         super(x, y, width, height);
         texture = new Texture(texturePath);
-    }
 
-    public Enemy(float x, float y, float width, float height) {
-        super(x, y, width, height);
-        texture = new Texture("enemy.png");
+        // 🔑 Si la taille n'est pas définie dans Tiled
+        if (this.width <= 0) this.width = texture.getWidth();
+        if (this.height <= 0) this.height = texture.getHeight();
     }
-
-    /**
-     * Met à jour l'état de l'ennemi.
-     * <p>
-     * Cette version d'ennemi est statique et ne nécessite pas de mise à jour.
-     * </p>
-     *
-     * @param delta Temps écoulé depuis la dernière frame (non utilisé)
-     */
 
     @Override
     public void update(float delta) {
         // Ennemi simple qui ne bouge pas
     }
 
-    /**
-     * Dessine l'ennemi à l'écran.
-     *
-     * @param batch Le SpriteBatch utilisé pour le rendu graphique
-     */
-
     @Override
     public void render(SpriteBatch batch) {
         batch.draw(texture, x, y, width, height);
     }
-
-    /**
-     * Libère les ressources graphiques de l'ennemi.
-     */
 
     @Override
     public void dispose() {

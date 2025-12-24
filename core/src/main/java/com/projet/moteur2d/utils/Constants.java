@@ -1,15 +1,5 @@
 package com.projet.moteur2d.utils;
-
-/**
- * Classe contenant toutes les constantes du jeu.
- * <p>
- * Centralise les valeurs constantes pour faciliter la maintenance
- * et assurer la cohérence dans tout le projet.
- * </p>
- *
- * @author Ngoc Mai Nguyen et Ahlam Lamkiki
- * @version 1.0
- */
+import com.projet.moteur2d.utils.JsonLoader.GameConfig;
 
 public class Constants {
     public static final int TILE_SIZE = 64;
@@ -17,7 +7,24 @@ public class Constants {
     public static final int MAP_HEIGHT = 30;
     public static final int PLAYER_WIDTH = 32;
     public static final int PLAYER_HEIGHT = 32;
-    public static final float PLAYER_SPEED = 200f; // TEMPORAIRE
-}
 
+    // ⬇️⬇️ TOUT DOIT ÊTRE DANS LA CLASSE ⬇️⬇️
+
+    /** Configuration du jeu chargée depuis le fichier JSON. */
+    private static final GameConfig CONFIG = JsonLoader.loadConfig();
+
+    /** Vitesse de déplacement du joueur (depuis config.json). */
+    public static final float PLAYER_SPEED = CONFIG.playerSpeed;
+
+    /** Dégâts infligés par les ennemis (depuis config.json). */
+    public static final int ENEMY_DAMAGE = CONFIG.enemyDamage;
+
+    /**
+     * Récupère le titre du jeu.
+     * @return Le titre chargé depuis la configuration JSON
+     */
+    public static String getGameTitle() {
+        return CONFIG.gameTitle;
+    }
+}
 
