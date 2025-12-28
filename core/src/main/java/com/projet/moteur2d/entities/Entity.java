@@ -2,7 +2,6 @@ package com.projet.moteur2d.entities;
 
 import com.projet.moteur2d.interfaces.Updatable;
 import com.projet.moteur2d.interfaces.Renderable;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 /**
  * Classe abstraite représentant une entité générique dans le jeu.
@@ -12,7 +11,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * que toutes les entités doivent implémenter.
  * </p>
  *
- * @author [Ton nom]
+ * @author Ngoc Mai Nguyen
  * @version 1.0
  * @see Player
  * @see Enemy

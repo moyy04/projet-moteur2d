@@ -14,14 +14,14 @@ import com.projet.moteur2d.world.GameMap;
  * avec les murs de la carte et les ennemis.
  * </p>
  *
- * @author [Ton nom]
+ * @author Ngoc Mai Nguyen
  * @version 1.0
  * @see Entity
  */
 
 public class Player extends Entity {
-    private Texture texture;
-    private GameMap gameMap;
+    private final Texture texture;
+    private final GameMap gameMap;
 
     /**
      * Construit un nouveau joueur à la position spécifiée.
@@ -57,6 +57,10 @@ public class Player extends Entity {
         if (Gdx.input.isKeyPressed(Input.Keys.S)) newY -= speed;
         if (Gdx.input.isKeyPressed(Input.Keys.A)) newX -= speed;
         if (Gdx.input.isKeyPressed(Input.Keys.D)) newX += speed;
+
+        // EMPÊCHE LE JOUEUR D'ALLER EN NÉGATIF
+        if (newY < 0) newY = 0;
+        if (newX < 0) newX = 0;
 
         if (!gameMap.collidesWithMap(newX, newY, width, height)) {
             x = newX;

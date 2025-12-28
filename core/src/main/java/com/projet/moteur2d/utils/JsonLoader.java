@@ -50,10 +50,6 @@ public class JsonLoader {
 
         /** Vitesse de déplacement du joueur en pixels par seconde */
         public float playerSpeed = 200f;
-
-        /** Dégâts infligés par un ennemi au contact */
-        public int enemyDamage = 1;
-
         /**
          * Constructeur par défaut.
          * <p>

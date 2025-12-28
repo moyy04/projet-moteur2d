@@ -145,24 +145,28 @@
     <property name="type" value="player"/>
    </properties>
   </object>
-  <object id="3" x="585.915" y="204.003" width="182.654" height="111.49">
+  <object id="3" x="579.9" y="177.95" width="182.654" height="111.49">
    <properties>
-    <property name="enemy_type" value="enemy"/>
+    <property name="enemy_type" value="slime"/>
+    <property name="type" value="enemy"/>
    </properties>
   </object>
   <object id="4" x="1224.02" y="201.631" width="256.19" height="102.001">
    <properties>
-    <property name="enemy_type" value="fire"/>
+    <property name="enemy_type" value="goblin"/>
+    <property name="type" value="enemy"/>
    </properties>
   </object>
   <object id="5" x="206.375" y="1264.34" width="102.001" height="185.026">
    <properties>
-    <property name="type" value="slime"/>
+    <property name="enemy_type" value="zombie"/>
+    <property name="type" value="enemy"/>
    </properties>
   </object>
   <object id="6" x="1541.88" y="1674.72" width="118.606" height="106.746">
    <properties>
-    <property name="type" value="slime"/>
+    <property name="enemy_type" value="slime"/>
+    <property name="type" value="enemy"/>
    </properties>
   </object>
  </objectgroup>

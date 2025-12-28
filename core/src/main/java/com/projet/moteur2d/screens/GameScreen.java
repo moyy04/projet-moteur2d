@@ -76,11 +76,12 @@ public class GameScreen implements Screen {
 
         // Positionner la caméra sur le joueur
         camera.position.set(
-            gameEngine.getPlayer().getX() + 16,
-            gameEngine.getPlayer().getY() + 16,
+            gameEngine.getPlayer().getX() + gameEngine.getPlayer().getWidth() / 2f,
+            gameEngine.getPlayer().getY() + gameEngine.getPlayer().getHeight() / 2f,
             0
         );
         camera.update();
+
 
         // Rendre la carte
         mapRenderer.setView(camera);

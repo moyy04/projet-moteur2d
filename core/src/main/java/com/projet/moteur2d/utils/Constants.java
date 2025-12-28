@@ -5,8 +5,8 @@ public class Constants {
     public static final int TILE_SIZE = 64;
     public static final int MAP_WIDTH = 30;
     public static final int MAP_HEIGHT = 30;
-    public static final int PLAYER_WIDTH = 32;
-    public static final int PLAYER_HEIGHT = 32;
+    public static final int PLAYER_WIDTH = 48;
+    public static final int PLAYER_HEIGHT = 64;
 
     // ⬇️⬇️ TOUT DOIT ÊTRE DANS LA CLASSE ⬇️⬇️
 
@@ -15,9 +15,6 @@ public class Constants {
 
     /** Vitesse de déplacement du joueur (depuis config.json). */
     public static final float PLAYER_SPEED = CONFIG.playerSpeed;
-
-    /** Dégâts infligés par les ennemis (depuis config.json). */
-    public static final int ENEMY_DAMAGE = CONFIG.enemyDamage;
 
     /**
      * Récupère le titre du jeu.

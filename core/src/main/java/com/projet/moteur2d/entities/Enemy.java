@@ -10,12 +10,12 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * en cas de collision. Leur position et taille sont définies dans Tiled.
  * </p>
  *
- * @author [Ton nom]
+ * @author Ngoc Mai Nguyen
  * @version 1.1
  * @see Entity
  */
 public class Enemy extends Entity {
-    private Texture texture;
+    private final Texture texture;
 
     /**
      * Construit un nouvel ennemi.
